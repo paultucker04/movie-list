@@ -1,18 +1,10 @@
 import {
   Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardHeader,
   Dialog,
   DialogActions,
   DialogContent,
-  DialogTitle,
-  Grid,
   IconButton,
   makeStyles,
-  Modal,
-  Paper,
   TextField,
   Typography,
   withStyles,
@@ -22,9 +14,8 @@ import MuiDialogTitle from "@material-ui/core/DialogTitle";
 
 import React from "react";
 import { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { createMovie } from "../../services/MoviesService";
-import { addMovie } from "../../store/action-creators";
 import { bindActionCreators } from "redux";
 import { actionCreators } from "../../store/index";
 import CloseIcon from "@material-ui/icons/Close";

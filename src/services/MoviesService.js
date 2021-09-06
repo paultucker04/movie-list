@@ -1,7 +1,9 @@
-const { httpResponseStatusHandler } = require("./Helper");
+const { httpResponseStatusHandler, getApiUrl } = require("./Helper");
+
+const apiUrl = getApiUrl();
 
 const getAllMovies = async () => {
-  return await fetch("http://localhost:8000/api/movies", {
+  return await fetch(apiUrl + "/api/movies", {
     headers: {
       Accept: "application/json",
       Authorization: "Bearer " + localStorage.getItem("token"),
@@ -15,7 +17,7 @@ const getAllMovies = async () => {
 };
 
 const createMovie = async (body) => {
-  return await fetch("http://localhost:8000/api/movies", {
+  return await fetch(apiUrl + "/api/movies", {
     method: "POST",
     headers: {
       Accept: "application/json",

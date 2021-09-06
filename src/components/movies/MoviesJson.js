@@ -1,13 +1,11 @@
-import { Box, Fab, Grid } from "@material-ui/core";
-import React, { useState } from "react";
+import { Box } from "@material-ui/core";
+import React from "react";
 // import { useState } from "react";
 import { useEffect } from "react";
-import { Add } from "@material-ui/icons";
 import { useSelector, useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
 import { actionCreators } from "../../store/index";
 import { getAllMovies } from "./../../services/MoviesService";
-import AddMovieModal from "./AddMovieModal";
 
 export default function MoviesList() {
   const movies = useSelector((state) => state.movies);
@@ -20,6 +18,7 @@ export default function MoviesList() {
     }
 
     getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

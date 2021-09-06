@@ -6,14 +6,12 @@ import {
   CardMedia,
   Grid,
   Typography,
-  SvgIcon,
 } from "@material-ui/core";
 import moment from "moment";
 import React, { useEffect, useState } from "react";
 import { httpResponseStatusHandler } from "../../services/Helper";
 import CircularProgressWithLabel from "../helper/CircularProgressWithLabel";
 import SVG from "./../../tomatometer.svg";
-import AddMovieModal from "./AddMovieModal";
 
 export default function MovieCard({ info }) {
   const [image, setImage] = useState("");
@@ -53,6 +51,7 @@ export default function MovieCard({ info }) {
 
         setYoutubeLink("https://www.youtube.com/watch?v=" + key);
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
