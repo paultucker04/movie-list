@@ -1,3 +1,23 @@
+# README
+This app was created to demonstrate skills with react and laravel. It uses react router, redux, and material ui.
+
+You are able to register, login, view movies and create movies. The json can be viewed as well.  
+Available routes:
+/login -> Login page  
+/register -> Registration page
+/movies -> Movie page
+/json -> Page that displays the json of the movies
+
+Movies can be added by clicking the + button at the bottom of the screen. Movies should take a name, year, a movie db id, and a rotten tomatoes stub
+
+To find movie db id, search the movie db with the movie you want and take the numerical id in the URI. For example, the link for forrest gump is https://www.themoviedb.org/movie/13-forrest-gump?language=en-US. The id is 13.
+
+To find the rotten tomatoes stub, search rotten movies with the movie and take the URI. The link is https://www.rottentomatoes.com/m/forrest_gump. forrest_gump should be put into the form.
+
+The image, imdb link, and score is pulled from the movie dbs api. The rotten tomatoes stub is just used to create a link to rotten tomatoes.
+
+The forms do not have any validation because I did not have time to add this in.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
