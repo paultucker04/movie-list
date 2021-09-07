@@ -55,7 +55,7 @@ export default function Login() {
           <Card>
             <CardHeader
               className={classes.header}
-              title="Login hello"
+              title="Login"
               color="primary"
             />
             <CardContent>
